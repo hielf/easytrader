@@ -48,7 +48,7 @@ class IClientTrader(abc.ABC):
 
 class ClientTrader(IClientTrader):
     # The strategy to use for getting grid data
-    grid_strategy: Type[grid_strategies.IGridStrategy] = grid_strategies.Copy
+    grid_strategy: Type[grid_strategies.IGridStrategy] = grid_strategies.Xls
 
     def __init__(self):
         self._config = client.create(self.broker_type)
